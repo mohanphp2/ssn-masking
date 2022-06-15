@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * Custom module.
+ */
+
+/**
+ * Implements custom handler function.
+ */
+
+function ssn_convertor($string = '') {
+  $output = '';
+  if ($string) {
+    $str = trim(strtolower($string));
+    $str = preg_replace("/[^0-9]/", "", $str);
+
+    $ssn = preg_replace('/[^\d]/', '', $str);
+    $ssn = preg_replace('/^(\d{3})(\d{2})(\d{4})$/', '$1-$2-$3', $ssn);
+    $output = $ssn;
+  }
+  
+  return $output;
+}

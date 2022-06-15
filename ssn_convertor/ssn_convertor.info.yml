@@ -1,0 +1,4 @@
+name: SSN convertor
+description: "Custom module, with custom twig filter to convert into ssn."
+type: module
+core_version_requirement: ">=8"

@@ -1,0 +1,5 @@
+services:
+  ssn_convertor.twig_extension:
+    class: Drupal\ssn_convertor\SsnConvertor
+    tags:
+      - { name: twig.extension }
